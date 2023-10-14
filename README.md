@@ -1,17 +1,15 @@
-# Getting Started
+# Softtek exercise
 
-### Reference Documentation
-For further reference, please consider the following sections:
+### The exercise
+The exercise consist in implementing a Springboot backend for the news platform.
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.7.16/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.7.16/maven-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.7.16/reference/htmlsingle/index.html#web)
 
-### Guides
-The following guides illustrate how to use some features concretely:
+### The solution
+The solution is presented as follows:
+- A RESTFUL API supporting the CRUD operations (crete, read, update, delete).
+- H2 in memory database.
+- Tests on the service and controller layers.
+- Handler exceptions presenting the correspondent HTTP status.
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
+
 

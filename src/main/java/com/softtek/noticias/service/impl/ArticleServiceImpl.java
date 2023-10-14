@@ -29,7 +29,7 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public ArticleEntity readArticle(UUID id) {
         return articleRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException(String.format("ID %s not found", id)));
+                .orElseThrow(() -> new EntityNotFoundException(String.format("Article %s not found", id)));
     }
 
     @Override
