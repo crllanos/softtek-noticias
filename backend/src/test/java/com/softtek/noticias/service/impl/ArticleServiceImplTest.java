@@ -72,6 +72,7 @@ class ArticleServiceImplTest {
     private ArticleEntity mockArticle_emptyTitle() {
         ArticleEntity a = mockArticle();
         a.setTitle(null);
+        a.setSummary(null);
         return a;
     }
 
