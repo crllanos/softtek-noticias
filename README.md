@@ -1,9 +1,11 @@
 # Softtek exercise
 
+## Frontend
+
 ## Backend
 
 ### The exercise
-The exercise consist in implementing a Springboot backend for the news platform.
+The exercise consist in implementing a Springboot backend in Java 11 for the news platform.
 
 ### The solution
 The solution is presented as follows:
