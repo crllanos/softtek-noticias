@@ -2,15 +2,14 @@
     <h2>Softeck noticias</h2>
     <ul>
       <li *ngFor="let article of articles">
-        <h2>{{ article.title }}</h2>
+        <h3>{{ article.title }}</h3>
         <p> {{article.summary }}</p>
-        <p>Publicado el {{ article.published_at | dateformatcustom }}</p>
-        <a [href]="article.url" target="_blank">Ver más</a>
-          </li>
+        <p><em>Publicado el {{ article.published_at | dateformatcustom }}</em> | <a [href]="article.url" target="_blank">Ver más</a></p>
+      </li>
     </ul>
-  </div>
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>
   
-
 
 
   

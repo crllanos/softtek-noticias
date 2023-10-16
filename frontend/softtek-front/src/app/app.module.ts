@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { DateFnsModule } from 'ngx-date-fns';
 import { DateformatcustomPipe } from './pipes/dateformatcustom.pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DateformatcustomPipe } from './pipes/dateformatcustom.pipe';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    DateFnsModule.forRoot()
+    DateFnsModule.forRoot(),
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
