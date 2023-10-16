@@ -6,8 +6,8 @@ import { RouterModule, Routes } from '@angular/router';
 //import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/articles', pathMatch: 'full' },
- // { path: 'articles', component: ArticleComponent },
+  { path: '', redirectTo: '/', pathMatch: 'full' },
+ // { path: 'articles', component: ArticleComponent }, // @todo agregar pagina fvoritos
   //{ path: 'favorites', component: FavoritesComponent }
 ];
 
