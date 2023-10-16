@@ -1,5 +1,6 @@
 package com.softtek.noticias.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
@@ -26,5 +27,6 @@ public class ArticleEntity {
     private String title;
     private String summary;
     private String url; // description
+    @JsonProperty("published_at")
     private LocalDate publishedAt;
 }

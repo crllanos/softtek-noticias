@@ -3,12 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Article } from '../model/article';
+import { environment } from '../../environments/environment'
 
 @Injectable({
   providedIn: 'root'
 })
 export class ArticleServiceService {
-  private apiUrl = 'https://api.spaceflightnewsapi.net/v4/articles';
+  private apiUrl = environment.apiArticles;
 
   constructor(private http: HttpClient) { }
 

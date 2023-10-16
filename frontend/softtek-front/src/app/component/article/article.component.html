@@ -5,9 +5,16 @@
 
     <ul>
       <li *ngFor="let article of filteredArticles">
-        <h3>{{ article.title }}</h3>
+        <h3>{{ article.title }}
+          <svg class="favicon" (click)="saveFav(article)" xmlns="http://www.w3.org/2000/svg" width="24" alt="gardar en Favoritos" title="gardar en Favoritos" height="24" viewBox="0 0 24 24">
+            <path d="M12 2l2.3 6.5h7.7l-6 4.5 2.3 6.5-6-4.5-6 4.5 2.3-6.5-6-4.5h7.7z" fill="yellow" />
+          </svg>
+  
+
+        </h3>
         <p> {{article.summary }}</p>
         <p><em>Publicado el {{ article.published_at | dateformatcustom }}</em> | <a [href]="article.url" target="_blank">Ver más</a></p>
+        
       </li>
     </ul>
     <pagination-controls (pageChange)="page = $event"></pagination-controls>
