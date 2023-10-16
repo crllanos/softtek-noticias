@@ -1,7 +1,10 @@
 <div>
     <h2>Softeck noticias</h2>
+    <input type="text" name="searchTerm" [(ngModel)]="searchTerm" (input)="filterList()">
+    <button (click)="filterList()">Buscar</button>
+
     <ul>
-      <li *ngFor="let article of articles">
+      <li *ngFor="let article of filteredArticles">
         <h3>{{ article.title }}</h3>
         <p> {{article.summary }}</p>
         <p><em>Publicado el {{ article.published_at | dateformatcustom }}</em> | <a [href]="article.url" target="_blank">Ver más</a></p>

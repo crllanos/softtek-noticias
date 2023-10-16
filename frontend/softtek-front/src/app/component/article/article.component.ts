@@ -14,20 +14,26 @@ export class ArticleComponent implements OnInit {
   pagedArticles: any[];
   itemsPerPage = 3
   page = 1;
+  filteredArticles: any[] = [];
+  searchTerm: string = '';
 
   constructor(private articleServiceService: ArticleServiceService) {
     this.articles = [];
     this.pagedArticles = [];
     
+    
     this.articleServiceService.getArticles().subscribe(articles => {
       console.log(articles)
       this.articles = articles;
+      this.filteredArticles = this.articles
     });
+
 
   }
 
 
   ngOnInit() {
+    this.filterList()
     this.updatePage();
   }
 
@@ -38,4 +44,10 @@ export class ArticleComponent implements OnInit {
 
   }
 
+
+  filterList() {
+    this.filteredArticles = this.articles.filter(article =>
+      article.title.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
+  }
 }

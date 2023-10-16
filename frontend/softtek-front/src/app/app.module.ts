@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DateFnsModule } from 'ngx-date-fns';
 import { DateformatcustomPipe } from './pipes/dateformatcustom.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     AppRoutingModule,
     HttpClientModule,
     DateFnsModule.forRoot(),
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
