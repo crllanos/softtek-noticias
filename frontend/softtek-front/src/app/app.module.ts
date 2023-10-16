@@ -10,12 +10,14 @@ import { DateFnsModule } from 'ngx-date-fns';
 import { DateformatcustomPipe } from './pipes/dateformatcustom.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule } from '@angular/forms';
+import { FavoritesComponent } from './component/favorites/favorites.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticleComponent,
-    DateformatcustomPipe
+    DateformatcustomPipe,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,

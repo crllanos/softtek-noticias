@@ -7,5 +7,5 @@ import { ArticleComponent } from './component/article/article.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'softtek-front';
+  title = '';
 }

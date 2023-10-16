@@ -5,6 +5,10 @@ The frontend presents a list of articles from an external provider, it is capabl
 
 Also, the front has the option to save an article as favorite, using for that the following Backend.
 
+### URL field.
+The exercise asks for a "description" field, but the News API do not offers such value. Instead, the application offers the URL to the original article as alternative.
+
+
 
 ## Backend
 

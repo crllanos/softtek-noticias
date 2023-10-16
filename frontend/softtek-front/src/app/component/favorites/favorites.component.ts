@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Article } from 'src/app/model/article';
-import { ArticleServiceService } from 'src/app/service/article-service.service'
 import { SofttekApiService } from 'src/app/service/softtek-api.service'
 
 @Component({
-  selector: 'app-article',
-  templateUrl: './article.component.html',
-  styleUrls: ['./article.component.css']
+  selector: 'app-favorites',
+  templateUrl: './favorites.component.html',
+  styleUrls: ['./favorites.component.css']
 })
 
-export class ArticleComponent implements OnInit {
+export class FavoritesComponent implements OnInit {
 
   articles: Article[];
   pagedArticles: any[];
@@ -18,13 +17,12 @@ export class ArticleComponent implements OnInit {
   filteredArticles: any[] = [];
   searchTerm: string = '';
 
-  constructor(private articleServiceService: ArticleServiceService, 
-    private softtekApi: SofttekApiService ) {
+  constructor(private softtekApi: SofttekApiService ) {
     this.articles = [];
     this.pagedArticles = [];
     
     
-    this.articleServiceService.getArticles().subscribe(articles => {
+    this.softtekApi.getFavorites().subscribe(articles => {
       console.log(articles)
       this.articles = articles;
       this.filteredArticles = this.articles
@@ -53,12 +51,4 @@ export class ArticleComponent implements OnInit {
     );
   }
 
-  saveFav(article: any){
-    this.softtekApi.saveFav(article).subscribe(response => {
-      console.log('Articulo guardado en favoritos:', response);
-      alert('Articulo guardado en favoritos');
-    }, error => {
-      console.error('Error al enviar el articulo:', error);
-    });
-  }
 }

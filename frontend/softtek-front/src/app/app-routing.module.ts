@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-//import { DashboardComponent } from './dashboard/dashboard.component';
-//import { HeroesComponent } from './heroes/heroes.component';
-//import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { ArticleComponent } from './component/article/article.component';
+import { FavoritesComponent } from './component/favorites/favorites.component'
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
- // { path: 'articles', component: ArticleComponent }, // @todo agregar pagina fvoritos
-  //{ path: 'favorites', component: FavoritesComponent }
+ { path: 'articles', component: ArticleComponent },
+  { path: 'favorites', component: FavoritesComponent }
 ];
 
 @NgModule({
