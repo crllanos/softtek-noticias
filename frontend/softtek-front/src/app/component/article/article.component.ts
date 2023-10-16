@@ -33,7 +33,7 @@ export class ArticleComponent implements OnInit {
 
   updatePage() {
     const startIndex = (this.page - 1) * this.itemsPerPage;
-    this.pagedArticles = this.articles;//.slice(startIndex, startIndex + this.itemsPerPage);
+    this.pagedArticles = this.articles.slice(startIndex, startIndex + this.itemsPerPage);
 
 
   }
