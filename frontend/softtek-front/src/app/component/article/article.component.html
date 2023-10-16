@@ -4,7 +4,7 @@
       <li *ngFor="let article of articles">
         <h2>{{ article.title }}</h2>
         <p> {{article.summary }}</p>
-        <p>Publicado el {{ article.publishedAt }}</p>
+        <p>Publicado el {{ article.published_at | dateformatcustom }}</p>
         <a [href]="article.url" target="_blank">Ver más</a>
           </li>
     </ul>

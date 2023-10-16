@@ -6,16 +6,20 @@ import { AppComponent } from './app.component';
 import { ArticleComponent } from './component/article/article.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { DateFnsModule } from 'ngx-date-fns';
+import { DateformatcustomPipe } from './pipes/dateformatcustom.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArticleComponent
+    ArticleComponent,
+    DateformatcustomPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    DateFnsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
