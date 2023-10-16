@@ -1,6 +1,10 @@
 # Softtek exercise
 
 ## Frontend
+The frontend presents a list of articles from an external provider, it is capable of search and paginate results, format the article's date.
+
+Also, the front has the option to save an article as favorite, using for that the following Backend.
+
 
 ## Backend
 
